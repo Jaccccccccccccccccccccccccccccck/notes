@@ -39,6 +39,9 @@ if (!ones) {
 ####长浮点数的mem指令 2-3✅
 BigFpMemImmOp -> 1-2 ? 
 BigFpMemPostOp -> 2-3 ?
+#####对应opcode指令分类数量
+- BigFpMemImmOp被**BigFpMemImmOp**继承，opcode为**ldur** or **stur**
+- BigFpMemPostOp被**BigFpMemPost**继承，opcode为**str** or **ldr**
 ####向量寄存器的mem指令 2:5✅
 VldMultOp -> 1-2 ?
 VldMultOp VstMultOp VstSingleOp VstSingleOp -> 1->4 ?
@@ -55,6 +58,7 @@ if (deinterleave) numMicroops += (regs / elems);
 VldMultOp64 -> 1-n ?
 VstMultOp64
 VstSingleOp64
+VldSingleOp64
 ```
 //第一部分 0-1
 numMicroops = wb ? 1 : 0;
@@ -70,6 +74,11 @@ numMicroops += numMemMicroops;
 int numMarshalMicroops = numRegs / 2 + (numRegs % 2 ? 1 : 0);
 numMicroops += numMarshalMicroops;
 ```
+#####对应的opcode数量（4个）
+- VldMultOp64被**VldMult64**继承，opcode为**vldmult64**
+- VstSingleOp64被**VstSingle64**继承，opcode为**vstsingle64**
+- VldMultOp64被**VldMult64**继承，opcode为**vldmult64**
+- VstMultOp64被**VstMult64**继承，opcode为**vstmult64**
 ####普通指令RFE 3✅
 ####普通指令SRS 2✅
 ####内存访问 
@@ -90,6 +99,7 @@ SrsOp -> 2
 Memory -> 3
 Memory64 -> 3
 
+####SVE相关指令 2-8 ✅
 SveLdStructSS 2-n ?
 SveStStructSS
 SveLdStructSI
@@ -111,6 +121,25 @@ if (isLoad) {
     }
 }
 ```
+##### 对应的opcode指令分类数量
+- SveLdStructSS 
+  - { "ld2b", "ld2h", "ld2w", "ld2d" },
+    { "ld3b", "ld3h", "ld3w", "ld3d" },
+    { "ld4b", "ld4h", "ld4w", "ld4d" } 
+- SveStStructSS
+  - { "st2b", "st2h", "st2w", "st2d" },
+    { "st3b", "st3h", "st3w", "st3d" },
+    { "st4b", "st4h", "st4w", "st4d" }
+- SveLdStructSI
+  - { "ld2b", "ld2h", "ld2w", "ld2d" },
+    { "ld3b", "ld3h", "ld3w", "ld3d" },
+    { "ld4b", "ld4h", "ld4w", "ld4d" }
+- SveStStructSI
+  - { "st2b", "st2h", "st2w", "st2d" },
+    { "st3b", "st3h", "st3w", "st3d" },
+    { "st4b", "st4h", "st4w", "st4d" }
+
+opcode名字这么随意？ **是的**
 
 ####Tcommit64 -> 2 ✅
 
