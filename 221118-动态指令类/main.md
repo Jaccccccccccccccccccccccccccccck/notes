@@ -155,3 +155,158 @@ Op1 =
         return fault;
     }
 ```
+
+## 所有函数
+动态指令信息类相比于静态指令类，没有增加什么实际函数，都是对状态的修改函数
+### 核心函数
+- 指令执行函数
+  - execute、initiateAcc、completeAcc
+- initiateAcc的调用函数（实际上会交给cpu来生成mem访问）
+  - initiateMemRead
+  - writeMem
+  - initiateHtmCmd?
+  - initiateMemAMO?
+- 计算branch指令跳转地址
+  - branchTarget
+- trap？
+- demapPage ？
+
+### 边缘函数
+- 构造解析函数
+- get源/目标寄存器数量
+  - numSrcs
+  - numDests
+  - numSrcRegs
+  - numDestRegs
+  - numFPDestRegs
+  - numIntDestRegs
+  - numCCDestRegs
+  - numVecDestRegs
+  - numVecElemDestRegs
+  - numVecPredDestRegs
+- 源/目标寄存器列表获取（from 静态指令类）
+  - destRegIdx
+  - srcRegIdx
+- 物理寄存器、逻辑寄存器转换函数
+  - flattenedDestIdx
+- renamed的物理寄存器获取函数
+  - renamedDestIdx
+  - renamedSrcIdx
+- 映射到同一逻辑寄存器**上一个**物理寄存器
+  - prevDestIdx
+- 源寄存器准备状态,get/set函数
+  - readySrcIdx
+  - markSrcRegReady
+- Flag get/set函数
+  - recordResult
+  - effAddrValid
+  - memOpDone
+  - notAnInst
+  - setNotAnInst
+  - translationStarted
+  - translationCompleted
+  - possibleLoadViolation
+  - hitExternalSnoop
+  - isTranslationDelayed
+  - readPredTaken/setPredTaken
+  - getHtmTransactionalDepth
+  - setHtmTransactionalState
+  - readMemAccPredicate/setMemAccPredicate
+  - readPredicate/setPredicate
+  - strictlyOrdered
+  - hasRequest
+- dump函数
+  - dump
+- 获取cpuid
+  - cpuId
+- 获取cpu的socketId
+  - socketId
+- 获取cpu的dataRequestorId
+  - requestorId
+- 获取contextId
+  - contextId
+- 获取出错类型
+  - getFault
+- 是否已经计算return回到的指令
+  - doneTargCalc
+- 预测地址 set/get函数
+  - setPredTarg
+  - readPredTarg
+- **一堆**指令类型flags
+  - 来自于静态指令类，isNop等
+- 获取静态指令类的opclass
+  - opClass
+- htm事务id get/set
+  - getHtmTransactionUid
+  - newHtmTransactionUid
+  - clearHtmTransactionalState
+- 事务depth
+  - getHtmTransactionalDepth
+- serialize相关函数
+  - setSerializeBefore
+  - clearSerializeBefore
+  - isTempSerializeBefore
+  - setSerializeAfter
+  - clearSerializeAfter
+  - isTempSerializeAfter
+  - setSerializeHandled
+  - isSerializeHandled
+- 指令status get/set函数
+  - setCompleted/isCompleted
+  - setResultReady/isResultReady
+  - setCanIssue/readyToIssue
+  - clearCanIssue/setIssued
+  - isIssued/clearIssued
+  - setExecuted/isExecuted
+  - setCanCommit/clearCanCommit/setCommitted/isCommitted
+  - readyToCommit/setAtCommit/isAtCommit
+  - setSquashed/isSquashed
+  - setInIQ/clearInIQ/isInIQ
+  - isSquashedInIQ/setSquashedInIQ
+  - setInLSQ/removeInLSQ/isInLSQ
+  - setSquashedInLSQ/isSquashedInLSQ
+  - setInROB/clearInROB/isInROB
+  - setSquashedInROB/isSquashedInROB/isPinnedRegsRenamed
+  - setPinnedRegsRenamed/isPinnedRegsWritten/setPinnedRegsWritten
+  - setPinnedRegsSquashDone
+- 当前pc get/set
+  - pcState
+- 当前线程state set函数
+  - setTid setThreadState
+- 获取当前线程状态（thread context）
+  - tcBase
+- 指令列表get set
+  - getInstListIt/setInstListIt
+- 获取连续store条件失败 set get
+  - readStCondFailures、setStCondFailures
+- monitor mwait functions？
+  - armMonitor
+  - mwait
+  - mwaitAtomic
+  - getAddrMonitor
+- msic register操作 ？？？ msic是什么
+  - readMiscReg/setMiscReg/readMiscRegOperand/setMiscRegOperand/updateMiscRegs
+- 物理寄存器 set get
+  - readIntRegOperand
+  - readFloatRegOperandBits
+  - readVecRegOperand
+  - getWritableVecRegOperand
+  - readVecElemOperand
+  - readVecPredRegOperand
+  - getWritableVecPredRegOperand
+  - readCCRegOperand
+  - setIntRegOperand
+  - setFloatRegOperandBits
+  - setVecRegOperand
+  - setVecElemOperand
+  - setVecPredRegOperand
+  - setCCRegOperand
+- 重命名 
+  - renameDestReg
+  - renameSrcReg
+- 判断是否mispredicted
+- 指令结果get/set函数
+  - popResult
+  - setResult
+- 物理寄存器实际赋值？ iew阶段调用
+  - forwardOldRegs
