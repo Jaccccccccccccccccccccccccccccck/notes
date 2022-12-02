@@ -1,0 +1,807 @@
+ABS: Absolute value (vector).
+
+ADD (vector): Add (vector).
+
+ADDHN, ADDHN2: Add returning High Narrow.
+
+ADDP (scalar): Add Pair of elements (scalar).
+
+ADDP (vector): Add Pairwise (vector).
+
+ADDV: Add across Vector.
+
+AESD: AES single round decryption.
+
+AESE: AES single round encryption.
+
+AESIMC: AES inverse mix columns.
+
+AESMC: AES mix columns.
+
+AND (vector): Bitwise AND (vector).
+
+BCAX: Bit Clear and XOR.
+
+BFCVT: Floating-point convert from single-precision to BFloat16 format (scalar).
+
+BFCVTN, BFCVTN2: Floating-point convert from single-precision to BFloat16 format (vector).
+
+BFDOT (by element): BFloat16 floating-point dot product (vector, by element).
+
+BFDOT (vector): BFloat16 floating-point dot product (vector).
+
+BFMLALB, BFMLALT (by element): BFloat16 floating-point widening multiply-add long (by element).
+
+BFMLALB, BFMLALT (vector): BFloat16 floating-point widening multiply-add long (vector).
+
+BFMMLA: BFloat16 floating-point matrix multiply-accumulate into 2x2 matrix.
+
+BIC (vector, immediate): Bitwise bit Clear (vector, immediate).
+
+BIC (vector, register): Bitwise bit Clear (vector, register).
+
+BIF: Bitwise Insert if False.
+
+BIT: Bitwise Insert if True.
+
+BSL: Bitwise Select.
+
+CLS (vector): Count Leading Sign bits (vector).
+
+CLZ (vector): Count Leading Zero bits (vector).
+
+CMEQ (register): Compare bitwise Equal (vector).
+
+CMEQ (zero): Compare bitwise Equal to zero (vector).
+
+CMGE (register): Compare signed Greater than or Equal (vector).
+
+CMGE (zero): Compare signed Greater than or Equal to zero (vector).
+
+CMGT (register): Compare signed Greater than (vector).
+
+CMGT (zero): Compare signed Greater than zero (vector).
+
+CMHI (register): Compare unsigned Higher (vector).
+
+CMHS (register): Compare unsigned Higher or Same (vector).
+
+CMLE (zero): Compare signed Less than or Equal to zero (vector).
+
+CMLT (zero): Compare signed Less than zero (vector).
+
+CMTST: Compare bitwise Test bits nonzero (vector).
+
+CNT: Population Count per byte.
+
+DUP (element): Duplicate vector element to vector or scalar.
+
+DUP (general): Duplicate general-purpose register to vector.
+
+EOR (vector): Bitwise Exclusive OR (vector).
+
+EOR3: Three-way Exclusive OR.
+
+EXT: Extract vector from pair of vectors.
+
+FABD: Floating-point Absolute Difference (vector).
+
+FABS (scalar): Floating-point Absolute value (scalar).
+
+FABS (vector): Floating-point Absolute value (vector).
+
+FACGE: Floating-point Absolute Compare Greater than or Equal (vector).
+
+FACGT: Floating-point Absolute Compare Greater than (vector).
+
+FADD (scalar): Floating-point Add (scalar).
+
+FADD (vector): Floating-point Add (vector).
+
+FADDP (scalar): Floating-point Add Pair of elements (scalar).
+
+FADDP (vector): Floating-point Add Pairwise (vector).
+
+FCADD: Floating-point Complex Add.
+
+FCCMP: Floating-point Conditional quiet Compare (scalar).
+
+FCCMPE: Floating-point Conditional signaling Compare (scalar).
+
+FCMEQ (register): Floating-point Compare Equal (vector).
+
+FCMEQ (zero): Floating-point Compare Equal to zero (vector).
+
+FCMGE (register): Floating-point Compare Greater than or Equal (vector).
+
+FCMGE (zero): Floating-point Compare Greater than or Equal to zero (vector).
+
+FCMGT (register): Floating-point Compare Greater than (vector).
+
+FCMGT (zero): Floating-point Compare Greater than zero (vector).
+
+FCMLA: Floating-point Complex Multiply Accumulate.
+
+FCMLA (by element): Floating-point Complex Multiply Accumulate (by element).
+
+FCMLE (zero): Floating-point Compare Less than or Equal to zero (vector).
+
+FCMLT (zero): Floating-point Compare Less than zero (vector).
+
+FCMP: Floating-point quiet Compare (scalar).
+
+FCMPE: Floating-point signaling Compare (scalar).
+
+FCSEL: Floating-point Conditional Select (scalar).
+
+FCVT: Floating-point Convert precision (scalar).
+
+FCVTAS (scalar): Floating-point Convert to Signed integer, rounding to nearest with ties to Away (scalar).
+
+FCVTAS (vector): Floating-point Convert to Signed integer, rounding to nearest with ties to Away (vector).
+
+FCVTAU (scalar): Floating-point Convert to Unsigned integer, rounding to nearest with ties to Away (scalar).
+
+FCVTAU (vector): Floating-point Convert to Unsigned integer, rounding to nearest with ties to Away (vector).
+
+FCVTL, FCVTL2: Floating-point Convert to higher precision Long (vector).
+
+FCVTMS (scalar): Floating-point Convert to Signed integer, rounding toward Minus infinity (scalar).
+
+FCVTMS (vector): Floating-point Convert to Signed integer, rounding toward Minus infinity (vector).
+
+FCVTMU (scalar): Floating-point Convert to Unsigned integer, rounding toward Minus infinity (scalar).
+
+FCVTMU (vector): Floating-point Convert to Unsigned integer, rounding toward Minus infinity (vector).
+
+FCVTN, FCVTN2: Floating-point Convert to lower precision Narrow (vector).
+
+FCVTNS (scalar): Floating-point Convert to Signed integer, rounding to nearest with ties to even (scalar).
+
+FCVTNS (vector): Floating-point Convert to Signed integer, rounding to nearest with ties to even (vector).
+
+FCVTNU (scalar): Floating-point Convert to Unsigned integer, rounding to nearest with ties to even (scalar).
+
+FCVTNU (vector): Floating-point Convert to Unsigned integer, rounding to nearest with ties to even (vector).
+
+FCVTPS (scalar): Floating-point Convert to Signed integer, rounding toward Plus infinity (scalar).
+
+FCVTPS (vector): Floating-point Convert to Signed integer, rounding toward Plus infinity (vector).
+
+FCVTPU (scalar): Floating-point Convert to Unsigned integer, rounding toward Plus infinity (scalar).
+
+FCVTPU (vector): Floating-point Convert to Unsigned integer, rounding toward Plus infinity (vector).
+
+FCVTXN, FCVTXN2: Floating-point Convert to lower precision Narrow, rounding to odd (vector).
+
+FCVTZS (scalar, fixed-point): Floating-point Convert to Signed fixed-point, rounding toward Zero (scalar).
+
+FCVTZS (scalar, integer): Floating-point Convert to Signed integer, rounding toward Zero (scalar).
+
+FCVTZS (vector, fixed-point): Floating-point Convert to Signed fixed-point, rounding toward Zero (vector).
+
+FCVTZS (vector, integer): Floating-point Convert to Signed integer, rounding toward Zero (vector).
+
+FCVTZU (scalar, fixed-point): Floating-point Convert to Unsigned fixed-point, rounding toward Zero (scalar).
+
+FCVTZU (scalar, integer): Floating-point Convert to Unsigned integer, rounding toward Zero (scalar).
+
+FCVTZU (vector, fixed-point): Floating-point Convert to Unsigned fixed-point, rounding toward Zero (vector).
+
+FCVTZU (vector, integer): Floating-point Convert to Unsigned integer, rounding toward Zero (vector).
+
+FDIV (scalar): Floating-point Divide (scalar).
+
+FDIV (vector): Floating-point Divide (vector).
+
+FJCVTZS: Floating-point Javascript Convert to Signed fixed-point, rounding toward Zero.
+
+FMADD: Floating-point fused Multiply-Add (scalar).
+
+FMAX (scalar): Floating-point Maximum (scalar).
+
+FMAX (vector): Floating-point Maximum (vector).
+
+FMAXNM (scalar): Floating-point Maximum Number (scalar).
+
+FMAXNM (vector): Floating-point Maximum Number (vector).
+
+FMAXNMP (scalar): Floating-point Maximum Number of Pair of elements (scalar).
+
+FMAXNMP (vector): Floating-point Maximum Number Pairwise (vector).
+
+FMAXNMV: Floating-point Maximum Number across Vector.
+
+FMAXP (scalar): Floating-point Maximum of Pair of elements (scalar).
+
+FMAXP (vector): Floating-point Maximum Pairwise (vector).
+
+FMAXV: Floating-point Maximum across Vector.
+
+FMIN (scalar): Floating-point Minimum (scalar).
+
+FMIN (vector): Floating-point minimum (vector).
+
+FMINNM (scalar): Floating-point Minimum Number (scalar).
+
+FMINNM (vector): Floating-point Minimum Number (vector).
+
+FMINNMP (scalar): Floating-point Minimum Number of Pair of elements (scalar).
+
+FMINNMP (vector): Floating-point Minimum Number Pairwise (vector).
+
+FMINNMV: Floating-point Minimum Number across Vector.
+
+FMINP (scalar): Floating-point Minimum of Pair of elements (scalar).
+
+FMINP (vector): Floating-point Minimum Pairwise (vector).
+
+FMINV: Floating-point Minimum across Vector.
+
+FMLA (by element): Floating-point fused Multiply-Add to accumulator (by element).
+
+FMLA (vector): Floating-point fused Multiply-Add to accumulator (vector).
+
+FMLAL, FMLAL2 (by element): Floating-point fused Multiply-Add Long to accumulator (by element).
+
+FMLAL, FMLAL2 (vector): Floating-point fused Multiply-Add Long to accumulator (vector).
+
+FMLS (by element): Floating-point fused Multiply-Subtract from accumulator (by element).
+
+FMLS (vector): Floating-point fused Multiply-Subtract from accumulator (vector).
+
+FMLSL, FMLSL2 (by element): Floating-point fused Multiply-Subtract Long from accumulator (by element).
+
+FMLSL, FMLSL2 (vector): Floating-point fused Multiply-Subtract Long from accumulator (vector).
+
+FMOV (general): Floating-point Move to or from general-purpose register without conversion.
+
+FMOV (register): Floating-point Move register without conversion.
+
+FMOV (scalar, immediate): Floating-point move immediate (scalar).
+
+FMOV (vector, immediate): Floating-point move immediate (vector).
+
+FMSUB: Floating-point Fused Multiply-Subtract (scalar).
+
+FMUL (by element): Floating-point Multiply (by element).
+
+FMUL (scalar): Floating-point Multiply (scalar).
+
+FMUL (vector): Floating-point Multiply (vector).
+
+FMULX: Floating-point Multiply extended.
+
+FMULX (by element): Floating-point Multiply extended (by element).
+
+FNEG (scalar): Floating-point Negate (scalar).
+
+FNEG (vector): Floating-point Negate (vector).
+
+FNMADD: Floating-point Negated fused Multiply-Add (scalar).
+
+FNMSUB: Floating-point Negated fused Multiply-Subtract (scalar).
+
+FNMUL (scalar): Floating-point Multiply-Negate (scalar).
+
+FRECPE: Floating-point Reciprocal Estimate.
+
+FRECPS: Floating-point Reciprocal Step.
+
+FRECPX: Floating-point Reciprocal exponent (scalar).
+
+FRINT32X (scalar): Floating-point Round to 32-bit Integer, using current rounding mode (scalar).
+
+FRINT32X (vector): Floating-point Round to 32-bit Integer, using current rounding mode (vector).
+
+FRINT32Z (scalar): Floating-point Round to 32-bit Integer toward Zero (scalar).
+
+FRINT32Z (vector): Floating-point Round to 32-bit Integer toward Zero (vector).
+
+FRINT64X (scalar): Floating-point Round to 64-bit Integer, using current rounding mode (scalar).
+
+FRINT64X (vector): Floating-point Round to 64-bit Integer, using current rounding mode (vector).
+
+FRINT64Z (scalar): Floating-point Round to 64-bit Integer toward Zero (scalar).
+
+FRINT64Z (vector): Floating-point Round to 64-bit Integer toward Zero (vector).
+
+FRINTA (scalar): Floating-point Round to Integral, to nearest with ties to Away (scalar).
+
+FRINTA (vector): Floating-point Round to Integral, to nearest with ties to Away (vector).
+
+FRINTI (scalar): Floating-point Round to Integral, using current rounding mode (scalar).
+
+FRINTI (vector): Floating-point Round to Integral, using current rounding mode (vector).
+
+FRINTM (scalar): Floating-point Round to Integral, toward Minus infinity (scalar).
+
+FRINTM (vector): Floating-point Round to Integral, toward Minus infinity (vector).
+
+FRINTN (scalar): Floating-point Round to Integral, to nearest with ties to even (scalar).
+
+FRINTN (vector): Floating-point Round to Integral, to nearest with ties to even (vector).
+
+FRINTP (scalar): Floating-point Round to Integral, toward Plus infinity (scalar).
+
+FRINTP (vector): Floating-point Round to Integral, toward Plus infinity (vector).
+
+FRINTX (scalar): Floating-point Round to Integral exact, using current rounding mode (scalar).
+
+FRINTX (vector): Floating-point Round to Integral exact, using current rounding mode (vector).
+
+FRINTZ (scalar): Floating-point Round to Integral, toward Zero (scalar).
+
+FRINTZ (vector): Floating-point Round to Integral, toward Zero (vector).
+
+FRSQRTE: Floating-point Reciprocal Square Root Estimate.
+
+FRSQRTS: Floating-point Reciprocal Square Root Step.
+
+FSQRT (scalar): Floating-point Square Root (scalar).
+
+FSQRT (vector): Floating-point Square Root (vector).
+
+FSUB (scalar): Floating-point Subtract (scalar).
+
+FSUB (vector): Floating-point Subtract (vector).
+
+INS (element): Insert vector element from another vector element.
+
+INS (general): Insert vector element from general-purpose register.
+
+LD1 (multiple structures): Load multiple single-element structures to one, two, three, or four registers.
+
+LD1 (single structure): Load one single-element structure to one lane of one register.
+
+LD1R: Load one single-element structure and Replicate to all lanes (of one register).
+
+LD2 (multiple structures): Load multiple 2-element structures to two registers.
+
+LD2 (single structure): Load single 2-element structure to one lane of two registers.
+
+LD2R: Load single 2-element structure and Replicate to all lanes of two registers.
+
+LD3 (multiple structures): Load multiple 3-element structures to three registers.
+
+LD3 (single structure): Load single 3-element structure to one lane of three registers.
+
+LD3R: Load single 3-element structure and Replicate to all lanes of three registers.
+
+LD4 (multiple structures): Load multiple 4-element structures to four registers.
+
+LD4 (single structure): Load single 4-element structure to one lane of four registers.
+
+LD4R: Load single 4-element structure and Replicate to all lanes of four registers.
+
+LDNP (SIMD&FP): Load Pair of SIMD&FP registers, with Non-temporal hint.
+
+LDP (SIMD&FP): Load Pair of SIMD&FP registers.
+
+LDR (immediate, SIMD&FP): Load SIMD&FP Register (immediate offset).
+
+LDR (literal, SIMD&FP): Load SIMD&FP Register (PC-relative literal).
+
+LDR (register, SIMD&FP): Load SIMD&FP Register (register offset).
+
+LDUR (SIMD&FP): Load SIMD&FP Register (unscaled offset).
+
+MLA (by element): Multiply-Add to accumulator (vector, by element).
+
+MLA (vector): Multiply-Add to accumulator (vector).
+
+MLS (by element): Multiply-Subtract from accumulator (vector, by element).
+
+MLS (vector): Multiply-Subtract from accumulator (vector).
+
+MOV (element): Move vector element to another vector element: an alias of INS (element).
+
+MOV (from general): Move general-purpose register to a vector element: an alias of INS (general).
+
+MOV (scalar): Move vector element to scalar: an alias of DUP (element).
+
+MOV (to general): Move vector element to general-purpose register: an alias of UMOV.
+
+MOV (vector): Move vector: an alias of ORR (vector, register).
+
+MOVI: Move Immediate (vector).
+
+MUL (by element): Multiply (vector, by element).
+
+MUL (vector): Multiply (vector).
+
+MVN: Bitwise NOT (vector): an alias of NOT.
+
+MVNI: Move inverted Immediate (vector).
+
+NEG (vector): Negate (vector).
+
+NOT: Bitwise NOT (vector).
+
+ORN (vector): Bitwise inclusive OR NOT (vector).
+
+ORR (vector, immediate): Bitwise inclusive OR (vector, immediate).
+
+ORR (vector, register): Bitwise inclusive OR (vector, register).
+
+PMUL: Polynomial Multiply.
+
+PMULL, PMULL2: Polynomial Multiply Long.
+
+RADDHN, RADDHN2: Rounding Add returning High Narrow.
+
+RAX1: Rotate and Exclusive OR.
+
+RBIT (vector): Reverse Bit order (vector).
+
+REV16 (vector): Reverse elements in 16-bit halfwords (vector).
+
+REV32 (vector): Reverse elements in 32-bit words (vector).
+
+REV64: Reverse elements in 64-bit doublewords (vector).
+
+RSHRN, RSHRN2: Rounding Shift Right Narrow (immediate).
+
+RSUBHN, RSUBHN2: Rounding Subtract returning High Narrow.
+
+SABA: Signed Absolute difference and Accumulate.
+
+SABAL, SABAL2: Signed Absolute difference and Accumulate Long.
+
+SABD: Signed Absolute Difference.
+
+SABDL, SABDL2: Signed Absolute Difference Long.
+
+SADALP: Signed Add and Accumulate Long Pairwise.
+
+SADDL, SADDL2: Signed Add Long (vector).
+
+SADDLP: Signed Add Long Pairwise.
+
+SADDLV: Signed Add Long across Vector.
+
+SADDW, SADDW2: Signed Add Wide.
+
+SCVTF (scalar, fixed-point): Signed fixed-point Convert to Floating-point (scalar).
+
+SCVTF (scalar, integer): Signed integer Convert to Floating-point (scalar).
+
+SCVTF (vector, fixed-point): Signed fixed-point Convert to Floating-point (vector).
+
+SCVTF (vector, integer): Signed integer Convert to Floating-point (vector).
+
+SDOT (by element): Dot Product signed arithmetic (vector, by element).
+
+SDOT (vector): Dot Product signed arithmetic (vector).
+
+SHA1C: SHA1 hash update (choose).
+
+SHA1H: SHA1 fixed rotate.
+
+SHA1M: SHA1 hash update (majority).
+
+SHA1P: SHA1 hash update (parity).
+
+SHA1SU0: SHA1 schedule update 0.
+
+SHA1SU1: SHA1 schedule update 1.
+
+SHA256H: SHA256 hash update (part 1).
+
+SHA256H2: SHA256 hash update (part 2).
+
+SHA256SU0: SHA256 schedule update 0.
+
+SHA256SU1: SHA256 schedule update 1.
+
+SHA512H: SHA512 Hash update part 1.
+
+SHA512H2: SHA512 Hash update part 2.
+
+SHA512SU0: SHA512 Schedule Update 0.
+
+SHA512SU1: SHA512 Schedule Update 1.
+
+SHADD: Signed Halving Add.
+
+SHL: Shift Left (immediate).
+
+SHLL, SHLL2: Shift Left Long (by element size).
+
+SHRN, SHRN2: Shift Right Narrow (immediate).
+
+SHSUB: Signed Halving Subtract.
+
+SLI: Shift Left and Insert (immediate).
+
+SM3PARTW1: SM3PARTW1.
+
+SM3PARTW2: SM3PARTW2.
+
+SM3SS1: SM3SS1.
+
+SM3TT1A: SM3TT1A.
+
+SM3TT1B: SM3TT1B.
+
+SM3TT2A: SM3TT2A.
+
+SM3TT2B: SM3TT2B.
+
+SM4E: SM4 Encode.
+
+SM4EKEY: SM4 Key.
+
+SMAX: Signed Maximum (vector).
+
+SMAXP: Signed Maximum Pairwise.
+
+SMAXV: Signed Maximum across Vector.
+
+SMIN: Signed Minimum (vector).
+
+SMINP: Signed Minimum Pairwise.
+
+SMINV: Signed Minimum across Vector.
+
+SMLAL, SMLAL2 (by element): Signed Multiply-Add Long (vector, by element).
+
+SMLAL, SMLAL2 (vector): Signed Multiply-Add Long (vector).
+
+SMLSL, SMLSL2 (by element): Signed Multiply-Subtract Long (vector, by element).
+
+SMLSL, SMLSL2 (vector): Signed Multiply-Subtract Long (vector).
+
+SMMLA (vector): Signed 8-bit integer matrix multiply-accumulate (vector).
+
+SMOV: Signed Move vector element to general-purpose register.
+
+SMULL, SMULL2 (by element): Signed Multiply Long (vector, by element).
+
+SMULL, SMULL2 (vector): Signed Multiply Long (vector).
+
+SQABS: Signed saturating Absolute value.
+
+SQADD: Signed saturating Add.
+
+SQDMLAL, SQDMLAL2 (by element): Signed saturating Doubling Multiply-Add Long (by element).
+
+SQDMLAL, SQDMLAL2 (vector): Signed saturating Doubling Multiply-Add Long.
+
+SQDMLSL, SQDMLSL2 (by element): Signed saturating Doubling Multiply-Subtract Long (by element).
+
+SQDMLSL, SQDMLSL2 (vector): Signed saturating Doubling Multiply-Subtract Long.
+
+SQDMULH (by element): Signed saturating Doubling Multiply returning High half (by element).
+
+SQDMULH (vector): Signed saturating Doubling Multiply returning High half.
+
+SQDMULL, SQDMULL2 (by element): Signed saturating Doubling Multiply Long (by element).
+
+SQDMULL, SQDMULL2 (vector): Signed saturating Doubling Multiply Long.
+
+SQNEG: Signed saturating Negate.
+
+SQRDMLAH (by element): Signed Saturating Rounding Doubling Multiply Accumulate returning High Half (by element).
+
+SQRDMLAH (vector): Signed Saturating Rounding Doubling Multiply Accumulate returning High Half (vector).
+
+SQRDMLSH (by element): Signed Saturating Rounding Doubling Multiply Subtract returning High Half (by element).
+
+SQRDMLSH (vector): Signed Saturating Rounding Doubling Multiply Subtract returning High Half (vector).
+
+SQRDMULH (by element): Signed saturating Rounding Doubling Multiply returning High half (by element).
+
+SQRDMULH (vector): Signed saturating Rounding Doubling Multiply returning High half.
+
+SQRSHL: Signed saturating Rounding Shift Left (register).
+
+SQRSHRN, SQRSHRN2: Signed saturating Rounded Shift Right Narrow (immediate).
+
+SQRSHRUN, SQRSHRUN2: Signed saturating Rounded Shift Right Unsigned Narrow (immediate).
+
+SQSHL (immediate): Signed saturating Shift Left (immediate).
+
+SQSHL (register): Signed saturating Shift Left (register).
+
+SQSHLU: Signed saturating Shift Left Unsigned (immediate).
+
+SQSHRN, SQSHRN2: Signed saturating Shift Right Narrow (immediate).
+
+SQSHRUN, SQSHRUN2: Signed saturating Shift Right Unsigned Narrow (immediate).
+
+SQSUB: Signed saturating Subtract.
+
+SQXTN, SQXTN2: Signed saturating extract Narrow.
+
+SQXTUN, SQXTUN2: Signed saturating extract Unsigned Narrow.
+
+SRHADD: Signed Rounding Halving Add.
+
+SRI: Shift Right and Insert (immediate).
+
+SRSHL: Signed Rounding Shift Left (register).
+
+SRSHR: Signed Rounding Shift Right (immediate).
+
+SRSRA: Signed Rounding Shift Right and Accumulate (immediate).
+
+SSHL: Signed Shift Left (register).
+
+SSHLL, SSHLL2: Signed Shift Left Long (immediate).
+
+SSHR: Signed Shift Right (immediate).
+
+SSRA: Signed Shift Right and Accumulate (immediate).
+
+SSUBL, SSUBL2: Signed Subtract Long.
+
+SSUBW, SSUBW2: Signed Subtract Wide.
+
+ST1 (multiple structures): Store multiple single-element structures from one, two, three, or four registers.
+
+ST1 (single structure): Store a single-element structure from one lane of one register.
+
+ST2 (multiple structures): Store multiple 2-element structures from two registers.
+
+ST2 (single structure): Store single 2-element structure from one lane of two registers.
+
+ST3 (multiple structures): Store multiple 3-element structures from three registers.
+
+ST3 (single structure): Store single 3-element structure from one lane of three registers.
+
+ST4 (multiple structures): Store multiple 4-element structures from four registers.
+
+ST4 (single structure): Store single 4-element structure from one lane of four registers.
+
+STNP (SIMD&FP): Store Pair of SIMD&FP registers, with Non-temporal hint.
+
+STP (SIMD&FP): Store Pair of SIMD&FP registers.
+
+STR (immediate, SIMD&FP): Store SIMD&FP register (immediate offset).
+
+STR (register, SIMD&FP): Store SIMD&FP register (register offset).
+
+STUR (SIMD&FP): Store SIMD&FP register (unscaled offset).
+
+SUB (vector): Subtract (vector).
+
+SUBHN, SUBHN2: Subtract returning High Narrow.
+
+SUDOT (by element): Dot product with signed and unsigned integers (vector, by element).
+
+SUQADD: Signed saturating Accumulate of Unsigned value.
+
+SXTL, SXTL2: Signed extend Long: an alias of SSHLL, SSHLL2.
+
+TBL: Table vector Lookup.
+
+TBX: Table vector lookup extension.
+
+TRN1: Transpose vectors (primary).
+
+TRN2: Transpose vectors (secondary).
+
+UABA: Unsigned Absolute difference and Accumulate.
+
+UABAL, UABAL2: Unsigned Absolute difference and Accumulate Long.
+
+UABD: Unsigned Absolute Difference (vector).
+
+UABDL, UABDL2: Unsigned Absolute Difference Long.
+
+UADALP: Unsigned Add and Accumulate Long Pairwise.
+
+UADDL, UADDL2: Unsigned Add Long (vector).
+
+UADDLP: Unsigned Add Long Pairwise.
+
+UADDLV: Unsigned sum Long across Vector.
+
+UADDW, UADDW2: Unsigned Add Wide.
+
+UCVTF (scalar, fixed-point): Unsigned fixed-point Convert to Floating-point (scalar).
+
+UCVTF (scalar, integer): Unsigned integer Convert to Floating-point (scalar).
+
+UCVTF (vector, fixed-point): Unsigned fixed-point Convert to Floating-point (vector).
+
+UCVTF (vector, integer): Unsigned integer Convert to Floating-point (vector).
+
+UDOT (by element): Dot Product unsigned arithmetic (vector, by element).
+
+UDOT (vector): Dot Product unsigned arithmetic (vector).
+
+UHADD: Unsigned Halving Add.
+
+UHSUB: Unsigned Halving Subtract.
+
+UMAX: Unsigned Maximum (vector).
+
+UMAXP: Unsigned Maximum Pairwise.
+
+UMAXV: Unsigned Maximum across Vector.
+
+UMIN: Unsigned Minimum (vector).
+
+UMINP: Unsigned Minimum Pairwise.
+
+UMINV: Unsigned Minimum across Vector.
+
+UMLAL, UMLAL2 (by element): Unsigned Multiply-Add Long (vector, by element).
+
+UMLAL, UMLAL2 (vector): Unsigned Multiply-Add Long (vector).
+
+UMLSL, UMLSL2 (by element): Unsigned Multiply-Subtract Long (vector, by element).
+
+UMLSL, UMLSL2 (vector): Unsigned Multiply-Subtract Long (vector).
+
+UMMLA (vector): Unsigned 8-bit integer matrix multiply-accumulate (vector).
+
+UMOV: Unsigned Move vector element to general-purpose register.
+
+UMULL, UMULL2 (by element): Unsigned Multiply Long (vector, by element).
+
+UMULL, UMULL2 (vector): Unsigned Multiply long (vector).
+
+UQADD: Unsigned saturating Add.
+
+UQRSHL: Unsigned saturating Rounding Shift Left (register).
+
+UQRSHRN, UQRSHRN2: Unsigned saturating Rounded Shift Right Narrow (immediate).
+
+UQSHL (immediate): Unsigned saturating Shift Left (immediate).
+
+UQSHL (register): Unsigned saturating Shift Left (register).
+
+UQSHRN, UQSHRN2: Unsigned saturating Shift Right Narrow (immediate).
+
+UQSUB: Unsigned saturating Subtract.
+
+UQXTN, UQXTN2: Unsigned saturating extract Narrow.
+
+URECPE: Unsigned Reciprocal Estimate.
+
+URHADD: Unsigned Rounding Halving Add.
+
+URSHL: Unsigned Rounding Shift Left (register).
+
+URSHR: Unsigned Rounding Shift Right (immediate).
+
+URSQRTE: Unsigned Reciprocal Square Root Estimate.
+
+URSRA: Unsigned Rounding Shift Right and Accumulate (immediate).
+
+USDOT (by element): Dot Product with unsigned and signed integers (vector, by element).
+
+USDOT (vector): Dot Product with unsigned and signed integers (vector).
+
+USHL: Unsigned Shift Left (register).
+
+USHLL, USHLL2: Unsigned Shift Left Long (immediate).
+
+USHR: Unsigned Shift Right (immediate).
+
+USMMLA (vector): Unsigned and signed 8-bit integer matrix multiply-accumulate (vector).
+
+USQADD: Unsigned saturating Accumulate of Signed value.
+
+USRA: Unsigned Shift Right and Accumulate (immediate).
+
+USUBL, USUBL2: Unsigned Subtract Long.
+
+USUBW, USUBW2: Unsigned Subtract Wide.
+
+UXTL, UXTL2: Unsigned extend Long: an alias of USHLL, USHLL2.
+
+UZP1: Unzip vectors (primary).
+
+UZP2: Unzip vectors (secondary).
+
+XAR: Exclusive OR and Rotate.
+
+XTN, XTN2: Extract Narrow.
+
+ZIP1: Zip vectors (primary).
+
+ZIP2: Zip vectors (secondary).
