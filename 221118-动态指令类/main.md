@@ -168,7 +168,7 @@ Op1 =
   - initiateMemAMO?
 - 计算branch指令跳转地址
   - branchTarget
-- trap？
+- trap ？
 - demapPage ？
 
 ### 边缘函数
@@ -268,7 +268,10 @@ Op1 =
   - setInROB/clearInROB/isInROB
   - setSquashedInROB/isSquashedInROB/isPinnedRegsRenamed
   - setPinnedRegsRenamed/isPinnedRegsWritten/setPinnedRegsWritten
-  - setPinnedRegsSquashDone
+  - setPinnedRegsSquashDone/isPinnedRegsSquashDone
+  - setSerializeBefore/clearSerializeBefore
+  - setSerializeAfter/clearSerializeAfter
+  - setSerializeHandled/isSerializeHandled
 - 当前pc get/set
   - pcState
 - 当前线程state set函数
