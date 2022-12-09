@@ -28,3 +28,25 @@
 
 --- 
 ![](./2.png)
+
+## 研究一下ldm(Load Multiple registers)指令拆分的情况
+
+文档：[here](https://developer.arm.com/documentation/dui0473/m/arm-and-thumb-instructions/ldm)
+- 语法
+  - LDM{addr_mode}{cond} Rn{!}, reglist{^}
+根据decode过程会得到几个参数：
+- addr_mode地址的遍历方式（正常情况是累加一个字长）
+- rn：基址寄存器
+- reglist：需要操作的寄存器列表
+- writeback：指令结束时是否将结束地址写入rn寄存器
+
+```
+MacroMemOp::MacroMemOp(const char *mnem, ExtMachInst machInst,
+                       OpClass __opClass, IntRegIndex rn,
+                       bool index, bool up, bool user, bool writeback,
+                       bool load, uint32_t reglist) :
+    PredMacroOp(mnem, machInst, __opClass)
+{
+    ...
+}
+```
