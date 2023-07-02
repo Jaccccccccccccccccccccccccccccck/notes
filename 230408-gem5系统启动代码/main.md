@@ -645,7 +645,7 @@ Global frequency set at 1000000000000 ticks per second
    47557 Probes: Call to addPoint "Data Update" to system.iocache.
 ```
 
-接下来是一堆functional的内存写操作从0x8008000开始到0x88002c40，这是VA？，每次读取64位  大概load了128MB的数据到mem
+接下来是一堆functional的内存写操作从0x8008000开始到0x88002c40，这是物理地址，每次读取64位  大概load了128MB的数据到mem
 ```
    47558       0: system.membus: recvFunctional: src system.membus.cpu_side_port[0] packet WriteReq [80080000:8008003f]
    47559       0: system.iocache: functionalAccess: WriteReq [80080000:8008003f]
@@ -708,7 +708,7 @@ Global frequency set at 1000000000000 ticks per second
 ```
 从地址0x000010开始ifetch 执行流为0x000010->0xPC:0x000104
 **这段代码为bootloader的代码！**
-所以80080000的代码是内核代码？
+所以80080000的代码是内核代码！
 随后执行刚才load的128M
 PC:0x80080000->。。。
 ```
